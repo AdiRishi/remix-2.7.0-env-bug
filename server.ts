@@ -7,3 +7,9 @@ if (process.env.NODE_ENV === "development") {
 }
 
 export const onRequest = createPagesFunctionHandler({ build });
+
+// Correct implementation
+// export const onRequest = createPagesFunctionHandler({
+//   build,
+//   getLoadContext: ({ context }) => ({ env: context.cloudflare.env }),
+// });
